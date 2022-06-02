@@ -16,6 +16,7 @@ export default function Header() {
                         <nav>
                             <Link to="/home">Home</Link >
                             <Link to="/sobre">Sobre</Link >
+                            <Link to="/relatorios">Relatorios</Link >
                             <Link to="/">Desconectar</Link >
                         </nav>
                     </>

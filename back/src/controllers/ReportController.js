@@ -1,6 +1,7 @@
 // Relatorios
 const PDFPrinter = require('pdfmake');
 const User = require('../models/UserModel')
+const moment = require('moment')
 
 module.exports = {
     async UsersReport(req, res) {
@@ -31,14 +32,16 @@ module.exports = {
             body.push(rows)
         }
 
+        const data = moment().format('DD/MM/YYYY HH:m')
+
         // O conteudo de fato do relatorio
         const docDefinitions = {
             defaultStyle: { font: "Helvetica" },
             content: [
                 {
                     columns: [
-                        { text: "Relatório de usuários", style: "header" },
-                        { text: "02/06/2022 11:00hrs\n\n", style: "header" }
+                        { text: "Relatório de usuários", style: "headerStart" },
+                        { text: `Emissão:${data}\n\n`, style: "headerEnd" }
                     ]
                 },
                 {
@@ -62,10 +65,15 @@ module.exports = {
                 }
             ],
             styles: {
-                header: {
+                headerStart: {
                     fontSize: 18,
                     bold: true,
-                    alignment: "center"
+                    alignment: "start"
+                },
+                headerEnd: {
+                    fontSize: 18,
+                    bold: true,
+                    marginLeft: 36
                 },
                 columnsTitle: {
                     fontSize: 15,

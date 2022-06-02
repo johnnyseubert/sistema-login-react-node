@@ -13,6 +13,6 @@ route.delete('/users/:id', UserController.deleteOne)
 route.post('/verificarLogin', UserController.verificarLogin)
 
 //Relatório
-route.get('/report/users', ReportController.UsersReport)
+route.get('/relatorio/users', ReportController.UsersReport)
 
 module.exports = route;

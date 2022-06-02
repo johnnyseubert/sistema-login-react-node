@@ -5,7 +5,7 @@ import './style.css';
 
 export default function HomePage() {
 
-    const { logged, baseAPIUrl } = useContext(UserLoginContext)
+    const { logged } = useContext(UserLoginContext)
     const navigate = useNavigate();
     useEffect(() => {
         if (!logged) {
@@ -16,7 +16,6 @@ export default function HomePage() {
     return (
         <>
             <h1>HOME PAGE</h1>
-            <a href={`${baseAPIUrl}/report/users`} target="_blank">Gerar Relatório</a>
         </>
     )
 }
