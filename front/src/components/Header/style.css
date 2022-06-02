@@ -1,0 +1,44 @@
+.topo {
+    width: 100%;
+    height: 75px;
+    background-color: #222;
+    color: white;
+}
+
+.topo .container {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 10px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container h3 {
+    font-size: 24px;
+}
+
+.topo nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.topo nav a {
+    color: white;
+    transition: .2s;
+}
+
+.topo nav a:hover {
+    color: #DEC129;
+}
+
+@media screen and (max-width: 470px) {
+    .topo .container {
+        flex-direction: column;
+    }
+}

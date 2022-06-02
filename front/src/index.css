@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dourado {
+  color: #DEC129;
+}
+
+input {
+  border: 1px solid black;
+}
+
+.value-invalid {
+  border-left: 5px solid red;
+}
