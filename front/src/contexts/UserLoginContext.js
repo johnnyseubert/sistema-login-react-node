@@ -4,6 +4,8 @@ export const UserLoginContext = createContext();
 
 export function UserLoginContextProvider({ children }) {
 
+    const baseAPIUrl = "http://localhost:3333/api";
+
     const [userName, setUserName] = useState(null);
     const [logged, setLogged] = useState(false);
 
@@ -12,7 +14,8 @@ export function UserLoginContextProvider({ children }) {
             userName,
             setUserName,
             logged,
-            setLogged
+            setLogged,
+            baseAPIUrl
         }}>
             {children}
         </UserLoginContext.Provider>
